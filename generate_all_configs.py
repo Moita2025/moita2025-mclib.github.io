@@ -19,6 +19,7 @@ def main():
             
             # 计算相对于当前目录的路径
             relative_path = config_path.relative_to(current_dir).as_posix()
+            seen_names = set()
             
             try:
                 with open(config_path, 'r', encoding='utf-8') as f:
